@@ -71,7 +71,7 @@ export default function Countries() {
           {filteredCountries.map((country: any) => (
             <li
               key={country.cca3}
-              className="bg-white border border-indigo-200 rounded-xl p-4 shadow hover:shadow-lg transition"
+              className="bg-indigo-50 border border-indigo-200 rounded-xl p-4 shadow hover:shadow-lg transition"
             >
               <div className="flex items-center gap-4">
                 <div>
