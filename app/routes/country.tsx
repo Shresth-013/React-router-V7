@@ -20,7 +20,6 @@ type CountryData = {
   timezones: string;
   borders: string[];
   flagUrl: string;
-  coatOfArmsUrl: string;
 };
 
 export default function Country() {
@@ -44,7 +43,7 @@ export default function Country() {
     timezones: c?.timezones?.join(", ") || "N/A",
     borders: Array.isArray(c?.borders) ? c.borders : [],
     flagUrl: c?.flags?.png || "",
-    coatOfArmsUrl: c?.coatOfArms?.png || "",
+    
   };
 
   const populationDensity = (country.population / country.area).toFixed(2);
@@ -82,9 +81,7 @@ export default function Country() {
         {country.flagUrl && (
           <img src={country.flagUrl} alt={`${country.name} flag`} className="w-56 h-auto border rounded shadow-lg" />
         )}
-        {country.coatOfArmsUrl && (
-          <img src={country.coatOfArmsUrl} alt={`${country.name} coat of arms`} className="w-40 h-auto border rounded shadow-lg" />
-        )}
+        
       </div>
     </div>
   );
